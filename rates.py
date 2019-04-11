@@ -1,14 +1,17 @@
 import requests, json
-from pprint import pprint
+#from pprint import pprint
+
+date = input("Date: ")
+if not date:
+    date = latest
 
 base = input("Currency: ")
-date = input("Date: ")
 rates = input("Exchange rates: ")
 
 #result = requests.get('https://api.exchangeratesapi.io/latest?base=' + base )
 link = 'https://api.exchangeratesapi.io/'
-url = link + 'history?start_at=' + date + '&end_at=' + date + '&symbols=' + rates + '&base=' + base
-result = requests.get(url)
-output = pprint(result.json())
-print (output)
+url = link + date + '?symbols=' + rates #+ '&base=' + base
+result = requests.get( url=url , params={'base':base} )
+output = result.json()
+print(output)
 
