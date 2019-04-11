@@ -3,7 +3,7 @@ import requests, json
 
 date = input("Date: ")
 if not date:
-    date = latest
+    date = 'latest'
 
 base = input("Currency: ")
 rates = input("Exchange rates: ")
