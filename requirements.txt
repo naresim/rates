@@ -1,0 +1,2 @@
+requests==2.21.0 
+#pip install -r /path/to/requirements.txt

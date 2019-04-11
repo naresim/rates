@@ -1,4 +1,5 @@
-import requests, json
+import requests
+
 date = input("Date: ")
 if not date:
     date = 'latest'
@@ -17,4 +18,3 @@ output = result.json()
 
 print("\n\nDate:%s\nCurrency:%s\nRates:%s"
       %(output['date'],output['base'],output['rates']))
-
